@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Midterm.cl.page</title>
+</head>
+<body>
+<div align="center">
+<h1>Employment Form</h1>
+<form action="<%=request.getContextPath()%>/MidtermController" method="post">
+<table style="width: 80%" style="margin-left: auto" style="margin-right: auto">
+<tr><td>Personal Information <br> </td></tr>
+<tr>
+
+
+<td>
+Full Name: <input type="text" name="Name" maxlength="50" size="50" required><br>
+Current Address: <input type="text" name="Address" size="50"><br>
+Contact Number: <input type="text" name="ContactNumber" pattern="\d{10}" required> Email: <input type="email" name="Email" required><br>
+</td>
+</tr>
+
+<tr>
+<td>
+
+Highest Education: <input type="text" name="Education"> Gender: <input type="radio" name="Gender" value="male" required />Male<input
+						type="radio" name="Gender" value="female" />Female
+						<input type="radio" name="Gender" value="other"/> Other
+</td>
+
+</tr>
+
+<tr>
+<td><br> Employment Eligibility</td>
+</tr>
+<tr>
+
+<td><br>Date Available: <input type="date" name="DateAvailable" required>
+Desired Position: <input type="text" name="Position"><br>
+
+Desired Salary: <input type="text" name="Salary" size="50" pattern="\d{1,6}(\.\d{2})?" required><br>
+
+Are you legally authorized to work in the country?<br> <input type="radio" name="Authorized" value="Yes" required>Yes
+														<input type="radio" name="Authorized" value="No"> No
+<br> Do you have relatives working for our company?<br> <input type="radio" name="Relatives" value="Yes" required>Yes
+														<input type="radio" name="Relatives" value="No"> No
+<br> If yes, explain further. <input type="text" size="50" name="Other">
+</td>
+
+
+</tr>
+
+</table>
+<p>By submitting this form, you agree to adhere to company policy and provide accurate information.</p>
+<br> <input type="submit" value="Submit" />
+</form>
+</div>
+
+
+</body>
+</html>
